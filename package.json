@@ -1,0 +1,42 @@
+{
+  "name": "simple-crud-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "node --loader ts-node/esm src/index.ts",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Ivan Gusak",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0"
+  }
+}
