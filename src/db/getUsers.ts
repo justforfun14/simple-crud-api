@@ -1,7 +1,11 @@
 import db from './db.js';
 
 export const getUsers = () => {
-  const users = db.entries();
+  const users = Array.from(db.entries());
 
-  return Object.fromEntries(users);
+  if (users.length === 0) {
+    return [];
+  }
+
+  return users.map(([_, user]) => ({ ...user }));
 };
